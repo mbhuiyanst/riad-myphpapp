@@ -1,4 +1,5 @@
-name: Deploy PHP App to Azure
+
+name: Deploy PHP App to Azure using github action
 
 on:
   push:

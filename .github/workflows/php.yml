@@ -22,7 +22,7 @@ jobs:
       run: composer install --no-progress --prefer-dist
 
     - name: Archive project files
-      run: zip -r myphpapp.zip .
+      run: zip -r riad-myphpapp.zip .
 
     - name: Azure login
       uses: azure/login@v1

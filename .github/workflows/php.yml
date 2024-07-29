@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      AZURE_RESOURCE_GROUP: riad-resource
-      AZURE_WEBAPP_NAME: your-webapp-name
+      AZURE_RESOURCE_GROUP: riadresources
+      AZURE_WEBAPP_NAME: riad-app
 
     steps:
     - name: Checkout code
@@ -36,6 +36,6 @@ jobs:
     - name: Deploy to Azure Web App
       run: |
         az webapp deployment source config-zip \
-          --resource-group $riadresources \
-          --name $riad-app \
+          --resource-group $AZURE_RESOURCE_GROUP \
+          --name $AZURE_WEBAPP_NAME \
           --src riad-myphpapp.zip
